@@ -62,7 +62,7 @@ def create_valid_html(findings: List[Finding]):
         <head>
             <style>
                 body, html {
-                    font-family: BMWTypeNext, sans-serif;
+                    font-family: Arial, sans-serif;
                     font-size: 0.9em;
                 }
                 table {
