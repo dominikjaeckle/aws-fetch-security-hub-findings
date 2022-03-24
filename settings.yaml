@@ -1,0 +1,27 @@
+# Configure all environments according to your file at ~/.aws/config
+# list of configured profiles
+accounts:
+  - profile1
+  - profile2
+
+# definition of filters and sort criteria can be found here:
+# https://docs.aws.amazon.com/cli/latest/reference/securityhub/get-findings.html
+
+# filters to be used to filter for security findints
+filters:
+  - filter_name: WorkflowStatus
+    value: NEW
+    comparison: EQUALS
+
+  - filter_name: SeverityLabel
+    value: HIGH
+    comparison: EQUALS
+
+  - filter_name: RecordState
+    value: ACTIVE
+    comparison: EQUALS
+
+# sorting of the return list
+sort_criteria:
+  field: LastObservedAt
+  sort_order: desc
